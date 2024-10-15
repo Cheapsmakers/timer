@@ -26,22 +26,31 @@
     body{
       font-size: 25px;
     }
-    box{
-      border: 2px solid black;
-      padding: 10px;
-      border-radius: 10px;
-      background-color: black;
+    }
+    .basic-box {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #000;
+        background-color: #f0f0f0;
+        padding: 10px;
+        color: black;
+      border-radius: 15px;
     }
   </style>
 </head>
 
 <body>
+  
+  <div class="basic-box">
+
+  
   <div id="js_timer">
   <h1>Timer</h1>
   <h2 id="timer">:0</h2>
   <button onclick="pause()">Stop Timer</button>
   <button onclick="location.reload()">Restart Timer</button>
   <script src="script.js"></script>
+    
   <script>
     var timer;
     var ele = document.getElementById('timer');
@@ -62,6 +71,8 @@
   <div class="box">
     
   </div>
+    </div>
+  <h2>this website is still in developpement.</h2>
 </body>
 
 </html>
