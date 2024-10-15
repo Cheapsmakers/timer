@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Timer</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    h1{
+      text-align: center;
+      padding: 1px;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Occupy full viewport height */
+      margin: 0; /* Reset default margins */
+    }
+
+    button {
+      margin: 10px; /* Add some spacing between buttons */
+    }
+    body{
+      font-size: 25px;
+    }
+    box{
+      border: 2px solid black;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="js_timer">
+  <h1>Timer</h1>
+  <h2 id="timer">:0</h2>
+  <button onclick="pause()">Stop Timer</button>
+  <button onclick="location.reload()">Restart Timer</button>
+  <script src="script.js"></script>
+  <script>
+    var timer;
+    var ele = document.getElementById('timer');
+
+    (function (){
+      var sec = 0;
+      timer = setInterval(()=>{
+        ele.innerHTML = '00:'+sec;
+        sec ++;
+      }, 1000) // each 1 second
+    })() 
+
+    function pause(){
+      clearInterval(timer);
+    }
+  </script>
+    </div>
+  <div class="box">
+    
+  </div>
+</body>
+
+</html>
